@@ -1,0 +1,34 @@
+﻿# Ambiente e variáveis
+.env
+.env.local
+.env.*.local
+
+# Dependências (Deno não usa, mas por segurança)
+node_modules/
+
+# IDE e editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Supabase (opcional - pode subir migrations, mas não secrets)
+supabase/.temp/
+supabase/.env
+
+# Deno
+deno.lock
+.deno/
+
+# Build
+dist/
+build/
+*.tsbuildinfo

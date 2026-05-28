@@ -1,0 +1,16 @@
+ALTER TABLE public.credit_packages 
+  ADD COLUMN IF NOT EXISTS billing_type TEXT,
+  ADD COLUMN IF NOT EXISTS billing_interval TEXT,
+  ADD COLUMN IF NOT EXISTS template_tier TEXT,
+  ADD COLUMN IF NOT EXISTS invoice_credits INTEGER DEFAULT 0,
+  ADD COLUMN IF NOT EXISTS estimate_credits INTEGER DEFAULT 0,
+  ADD COLUMN IF NOT EXISTS ai_estimate_credits INTEGER DEFAULT 0,
+  ADD COLUMN IF NOT EXISTS invoice_unlimited BOOLEAN DEFAULT false,
+  ADD COLUMN IF NOT EXISTS estimate_unlimited BOOLEAN DEFAULT false,
+  ADD COLUMN IF NOT EXISTS ai_estimate_unlimited BOOLEAN DEFAULT false,
+  ADD COLUMN IF NOT EXISTS trial_enabled BOOLEAN DEFAULT false,
+  ADD COLUMN IF NOT EXISTS trial_days INTEGER,
+  ADD COLUMN IF NOT EXISTS trial_invoice_credits INTEGER DEFAULT 0,
+  ADD COLUMN IF NOT EXISTS trial_estimate_credits INTEGER DEFAULT 0,
+  ADD COLUMN IF NOT EXISTS trial_ai_estimate_credits INTEGER DEFAULT 0,
+  ADD COLUMN IF NOT EXISTS duration_days INTEGER;

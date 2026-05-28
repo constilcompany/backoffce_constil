@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "dev": "deno run --env-file --allow-env --allow-read --allow-net --watch supabase/functions/auth-api/index.ts",
+    "start": "deno run --env-file --allow-env --allow-net supabase/functions/auth-api/index.ts"
+  }
+}
