@@ -89,7 +89,7 @@ Deno.serve(async (req) => {
 
     // --- SEND EMAIL NOTIFICATION ---
     try {
-      const SENDGRID_API_KEY = Deno.env.get("SENDGRID_API_KEY") || "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";
+      const SENDGRID_API_KEY = Deno.env.get("SENDGRID_API_KEY");
       
       if (SENDGRID_API_KEY) {
         const supportEmail = "support@constil.com";
